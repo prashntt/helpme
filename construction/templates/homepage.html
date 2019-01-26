@@ -1,0 +1,87 @@
+{% extends 'base.html'%}
+{% load static %}
+
+{% block title %}HelpMe{% endblock %}
+
+{% block content %}
+<br>
+<style>
+.logo{
+  font-size: 200px;
+}
+
+.logo-small {
+    color: #f4511e;
+    font-size: 50px;
+}
+</style>
+<!--new-->
+<div class="jumbotron text-center">
+  <h1>HelpMe</h1> 
+  <p>How can i help you :-)</p> 
+</div>
+
+<!-- Container (About Section) -->
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-sm-8">
+      <h2>About HelpMe</h2>
+      <p>The main objective of our existance is to provide the quality services to our customers and 
+    minimizing their efforts in searching for the human resource by making right person available to them at the right time. Our approach also facilitates 
+    the workers in finding the job that matches their skills and promotes their skill development. Apart from this, 
+    We ensure safety of workers and strictly enforce labour laws.</p>
+      <br><button class="btn btn-default btn-lg">Join us</button>
+    </div>
+    <div class="col-sm-4">
+      <span class="glyphicon glyphicon-thumbs-up logo"></span>
+    </div>
+  </div>
+</div>
+<!--end-->
+
+<!-- Container (Services Section) -->
+<div id="services" class="container-fluid text-center">
+  <a href="{% url 'services' %}"><h2>SERVICES</h2></a>
+  <h4>What we offer to our clients</h4>
+  <br>
+  <div class="row slideanim">
+    <div class="col-sm-4">
+      <span class="glyphicon glyphicon-flash logo-small"></span>
+      <h4>Fast Services</h4>
+      <p>Committed to finish work quickly</p>
+    </div>
+    <div class="col-sm-4">
+      <span class="glyphicon glyphicon-usd logo-small"></span>
+      <h4>Affordable</h4>
+      <p>Making servies available at reasonable cost</p>
+    </div>
+    <div class="col-sm-4">
+      <span class="glyphicon glyphicon-ok-circle logo-small"></span>
+      <h4>Quality Servies</h4>
+      <p>We don't compromise with quality</p>
+    </div>
+  </div>
+  <br>
+  <br>
+  <h4>What we offer to job seekers</h4>
+  <br>
+  <div class="row slideanim">
+    <div class="col-sm-4">
+      <span class="glyphicon glyphicon-calendar logo-small"></span>
+      <h4>Your Choice</h4>
+      <p>Work when you want to</p>
+    </div>
+    <div class="col-sm-4">
+      <span class="glyphicon glyphicon-thumbs-up logo-small"></span>
+      <h4>Find You Work</h4>
+      <p>We seach opportunities for you</p>
+    </div>
+    <div class="col-sm-4">
+      <span class="glyphicon glyphicon-wrench logo-small"></span>
+      <h4 style="color:#303030;">Allocation</h4>
+      <p>We prefer right person at right job</p>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

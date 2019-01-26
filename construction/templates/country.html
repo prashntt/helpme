@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+	<h1>Articles</h1>
+<ul>
+{% for country in Countries %}
+    <li>{{ country.id }} {{ country.Name }}</li>
+{% empty %}
+    <li>No articles yet.</li>
+{% endfor %}
+</ul>
+{% endblock %}

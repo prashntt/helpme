@@ -1,0 +1,55 @@
+{% extends 'base.html'%}
+
+{% block title %}Services{% endblock %}
+
+{% block content %}
+<br>
+<br>
+<br>
+<br>
+<div class="container">
+  <h2>Services we offer</h2>
+  <div class="panel-group" id="accordion">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">Industrail Services</a>
+        </h4>
+      </div>
+      <div id="collapse1" class="panel-collapse collapse in">
+        <div class="panel-body">We provide on demand services required in the industries like welding, bending, drilling and operating machines. </div>
+      </div>
+    </div>
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">Construction Services</a>
+        </h4>
+      </div>
+      <div id="collapse2" class="panel-collapse collapse">
+        <div class="panel-body">We also provide the various services for small scale construction to large scale construction sites which involves general purpose work like loading and unloading builing materials, fitting, painting, carpentry, brickmason etc.</div>
+      </div>
+    </div>
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse3">Laundry Services</a>
+        </h4>
+      </div>
+      <div id="collapse3" class="panel-collapse collapse">
+        <div class="panel-body">Washing and ironing of clothes is not hectic anymore. We provide on demand washing, ironing and dry cleaning of clothes.</div>
+      </div>
+    </div>
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse4">Repair Services</a>
+        </h4>
+      </div>
+      <div id="collapse4" class="panel-collapse collapse">
+        <div class="panel-body">Want to get your appliances repaired ? No problem, We provide the repairing services as well for water purifiers, geysers, refrigerators, generators, inverters, elevators, Air conditioners, air coolers, water coolers and other electrical or mechanical items.</div>
+      </div>
+    </div>
+  </div> 
+</div>
+{% endblock %}

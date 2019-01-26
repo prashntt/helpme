@@ -1,0 +1,53 @@
+{% load static %}
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.min.css' %}">
+	
+    <title>{% block title %}{% endblock %}</title>
+  </head>
+  <body>
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid">
+  <div class="navbar-header">
+      <a class="navbar-brand" href="{% url 'home' %}">HelpMe</a>
+    </div>
+    <ul class="nav navbar-nav">
+	
+      <li><a href="{% url 'home' %}">Home</a></li>
+      <li><a href="{% url 'about' %}">About Us</a></li>
+      <li><a href="{% url 'services' %}">Services</a></li>
+	  <li><a href="{% url 'contacts' %}">Contact Us</a></li>
+		
+    </ul>
+	{% if user.is_authenticated %}
+	<ul class="nav navbar-nav navbar-right">
+        <li><a href="{% url 'logout' %}"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
+      </ul>
+	  
+	{% else %}
+	  <ul class="nav navbar-nav navbar-right">
+        <li><a href="{% url 'login' %}"><span class="glyphicon glyphicon-log-in "></span> Login</a></li>
+		<li><a href="{% url 'signup' %}"><span class="glyphicon glyphicon-log-in "></span> Register Here</a></li>
+      </ul>
+	{% endif %}
+
+  </div>
+</nav>
+
+{% block content %}
+
+{% endblock %}
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="{% static 'bootstrap/js/bootstrap.min.js' %}"></script>
+  </body>
+</html>
